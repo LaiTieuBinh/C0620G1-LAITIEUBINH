@@ -6,13 +6,61 @@
 </head>
 <body>
     <script>
-        let tienVay =parseInt(prompt("nhập số tiền vay"));
-        let laiSuatVay=parseInt(prompt("nhập số lãi"));
-        let thang=parseInt(prompt("nhập số tháng"));
+        let tienVay =parseFloat(prompt("nhập số tiền vay"));
+        let laiSuatVay=parseFloat(prompt("nhập số lãi suất % năm"));
+        let thang=parseFloat(prompt("nhập tháng"));
+        let laiVay;
         switch (thang) {
-            case
-
+            case 1:{
+                laiVay = ((tienVay * laiSuatVay) / 365) * 31;
+                alert("lãi vay theo tháng 1 là "+ laiVay);
+        } break;
+            case 2:{
+                laiVay = ((tienVay * laiSuatVay) / 365) * 28;
+                alert("lãi vay theo tháng 2 là "+ laiVay);
+            } break;
+            case 3:{
+                laiVay = ((tienVay * laiSuatVay) / 365) * 30;
+                alert("lãi vay theo tháng 3 là "+ laiVay);
+            } break;
+            case 4:{
+                laiVay = ((tienVay * laiSuatVay) / 365) * 30;
+                alert("lãi vay theo tháng 4 là "+ laiVay);
+            } break;
+            case 5:{
+                laiVay = ((tienVay * laiSuatVay) / 365) * 31;
+                alert("lãi vay theo tháng 5 là "+ laiVay);
+            } break;
+            case 6:{
+                laiVay = ((tienVay * laiSuatVay) / 365) * 30;
+                alert("lãi vay theo tháng 5 là "+ laiVay);
+            } break;
+            case 7:{
+                laiVay = ((tienVay * laiSuatVay) / 365) *31;
+                alert("lãi vay theo tháng 7 là "+ laiVay);
+            } break;
+            case 8:{
+                laiVay = ((tienVay * laiSuatVay) / 365) * 30;
+                alert("lãi vay theo tháng 8 là "+ laiVay);
+            } break;
+            case 9:{
+                laiVay = ((tienVay * laiSuatVay) / 365) *30 ;
+                alert("lãi vay theo tháng 9 là "+ laiVay);
+            } break;
+            case 10:{
+                laiVay = ((tienVay * laiSuatVay) / 365) * 31;
+                alert("lãi vay theo tháng 10 là "+ laiVay);
+            } break;
+            case 11:{
+                laiVay = ((tienVay * laiSuatVay) / 365) * 30;
+                alert("lãi vay theo tháng 11 là "+ laiVay);
+            } break;
+            case 12:{
+                laiVay = ((tienVay * laiSuatVay) / 365) * 31;
+                alert("lãi vay theo tháng 12 là "+ laiVay);
+            } break;
         }
+
 
     </script>
 </body>
