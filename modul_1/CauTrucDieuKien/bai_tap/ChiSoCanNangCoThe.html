@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số cân nặng cơ thể</title>
+</head>
+<body>
+    <script>
+        let inputWeigth = parseFloat(prompt("nhập số cân nặng "));
+        let inputHeight = parseFloat(prompt("nhập số chiều cao "));
+        let bmi = inputWeigth/(inputHeight*inputHeight);
+        if (bmi < 18.5) {
+            document.write("Underweight");
+        } else if (bmi <25){
+            document.write("Nomar");
+        }else if (bmi <30) {
+            document.write("Overweight");
+        } else document.write("Oberse");
+    </script>
+</body>
+</html>

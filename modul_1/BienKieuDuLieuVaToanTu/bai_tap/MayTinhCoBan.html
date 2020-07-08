@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh co ban</title>
+</head>
+<body>
+    <form>
+        <input id="input1" type="text" name="input1" value="">
+        <input id="input2" type="text" name="input2" value="">
+        <input type="button"  value="+" onclick="sum()">
+        <input type="button"  value="-" onclick="sub()">
+        <input type="button" value="*" onclick="multi()">
+        <input type="button"  value="/" onclick="div()">
+    <!--<p id="total">total</p>-->
+        <input id="total" type="text" name="total" value="0">
+    </form>
+    <script>
+        function sum() {
+            let input1=parseInt(document.getElementById("input1").value);
+            let input2=parseInt(document.getElementById("input2").value);
+            tong = input1 + input2;
+            document.getElementById("total").value= tong;
+        }
+        function sub() {
+            let input1=parseInt(document.getElementById("input1").value);
+            let input2=parseInt(document.getElementById("input2").value);
+            tong = input1 - input2;
+            document.getElementById("total").value=tong;
+        }
+        function multi() {
+            let input1=parseInt(document.getElementById("input1").value);
+            let input2=parseInt(document.getElementById("input2").value);
+            tong = input1 * input2;
+            document.getElementById("total").value= tong;
+        }
+        function div() {
+            let input1=parseInt(document.getElementById("input1").value);
+            let input2=parseInt(document.getElementById("input2").value);
+            tong = input1 / input2;
+            document.getElementById("total").value=tong;
+        }
+    </script>
+</body>
+</html>
