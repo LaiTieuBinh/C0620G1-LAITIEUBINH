@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let tieuThu = parseFloat(prompt("nhập số tiêu thụ "));
+        let tongCong;
+        if(tieuThu < 50){
+            tongCong = tieuThu*1.510;
+        } else if (tieuThu < 100){
+            tongCong = 50*1.510 + (tieuThu-50)*1.561;
+        } else if (tieuThu < 200){
+            tongCong = 50*1.510 + 50*1.561+(tieuThu -100)*1.813;
+        } else if (tieuThu < 300){
+            tongCong = 50*1.510 + 50*1.561+100*1.813+(tieuThu-200)*2.282;
+        } else if (tieuThu < 400){
+            tongCong = 50*1.510 + 50*1.561+100*1.813+100*2.282+(tieuThu-300)*2.834;
+        } else if (tieuThu >= 400){
+            tongCong = 50*1.510 + 50*1.561+100*1.813+100*2.282+100*2.834+(tieuThu-400)*2.927;
+        }
+        let thanhTien = tongCong + 0.1*tongCong;
+        alert("tong cong "+ tongCong + "\n"+"thành tiền " +thanhTien);
+    </script>
+</body>
+</html>
