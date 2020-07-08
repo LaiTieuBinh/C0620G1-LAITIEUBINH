@@ -19,10 +19,17 @@
             }
         } else {
             let delta = b*b - 4*a*c;
-            let nghiem1 = (-b + delta)/(2*a);
-            let nghiem2 = (-b - delta)/(2*a);
-            alert("giá trị nghiệm 1 là "+ nghiem1);
-            alert("giá trị nghiệm 2 là "+ nghiem2);
+            if(delta < 0){
+                alert("pt vô nghiệm");
+            } else if (delta == 0){
+                let nghiemX1X2 = -b/(2*a);
+                alert("nghiệm kép là "+ nghiemX1X2);
+            } else {
+                let nghiem1 = (-b + sqrl(delta) / (2 * a));
+                let nghiem2 = (-b - sqrl(delta) / (2 * a));
+                alert("giá trị nghiệm 1 là " + nghiem1);
+                alert("giá trị nghiệm 2 là " + nghiem2);
+            }
         }
 
     </script>
