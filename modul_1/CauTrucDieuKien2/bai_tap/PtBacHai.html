@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("nhập giá trị a"));
+        let b = parseFloat(prompt("nhập giá trị b"));
+        let c = parseFloat(prompt("nhập giá trị c"));
+        if(a === 0){
+            if(b === 0){
+                if(c === 0){
+                    alert("pt vô số nghiệm");
+                } else alert("pt vô nghiệm");
+            } else { let nghiem = -c/b;
+                alert("nghiệm của pt là "+ nghiem);
+            }
+        } else {
+            let delta = b*b - 4*a*c;
+            let nghiem1 = (-b + delta)/(2*a);
+            let nghiem2 = (-b - delta)/(2*a);
+            alert("giá trị nghiệm 1 là "+ nghiem1);
+            alert("giá trị nghiệm 2 là "+ nghiem2);
+        }
+
+    </script>
+</body>
+</html>

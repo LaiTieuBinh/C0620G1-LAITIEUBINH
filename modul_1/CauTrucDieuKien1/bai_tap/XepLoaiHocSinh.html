@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let diemkiemtra = parseFloat(prompt("nhập điểm kiểm tra"));
+        let diemgiuaky = parseFloat(prompt("nhập điểm giữa kỳ"));
+        let diemcuoiky = parseFloat(prompt("nhập điểm cuối kỳ"));
+        let tb = (diemkiemtra + diemgiuaky +diemcuoiky)/3;
+        if(tb >= 8.5) {
+            alert("loại giỏi");
+        }else if (tb >= 7) {
+            alert("loại khá");
+        }else if(tb >= 5){
+        alert("trung bình");
+        }else alert("loại yếu");
+    </script>
+</body>
+</html>
