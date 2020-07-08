@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tree_1</title>
+</head>
+<body>
+    <script>
+        let name = prompt ("Nhập tên khách hàng ");
+        let soCmnd = prompt ("Nhập số chứng minh nhân dân ");
+        let birthday = prompt ("Nhập ngày tháng năm sinh ");
+        let address = prompt ("Nhập địa chỉ ");
+        let email = prompt ("Nhập email ");
+        let typeCustomer = prompt ("Nhập loại Customer ");
+        let typeRoom = prompt ("Nhập loại phòng ");
+        let discount = prompt ("Nhập giảm giá ");
+        let number = prompt ("Nhập số lượng ");
+        let rentDay = prompt ("Nhập số ngày thuê ");
+        let typeService = prompt ("Nhập loại dịch vụ ");
+        let totalDay;
+        discount = parseInt(discount);
+        number = parseInt(number);
+        rentDay = parseInt(rentDay);
+        if (typeService === "vila") {
+            totalDay = 500*rentDay*(1-discount/100);
+        } else if (typeService === "house") {
+                totalDay = 300*rentDay*(1-discount/100);
+        } else if (typeService === "room") {
+                    totalDay = 100*rentDay*(1-discount/100);
+                }
+        alert("name " + name + "\n" + "soCmnd " + soCmnd + "\n" + "ngay thang nam sinh " + birthday + "\n" +
+                "dia chi " + address + "\n" + "email " + email + "\n" + "loai customer " + typeCustomer + "\n" +
+                "loai phong " + typeRoom + "\n" + "giam gia" + discount + "\n" + "so luong " + number + "\n" +
+                "so ngay thue " + rentDay + "\n" + "loai dich vu " + typeService + "\n"+ "tong " + totalDay);
+    </script>
+</body>
+</html>
