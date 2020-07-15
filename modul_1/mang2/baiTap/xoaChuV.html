@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let length=parseInt(prompt("nhập chiều dài mảng "));
+        let array=new Array(length);
+        for(let i=0;i<array.length;i++){
+            let num=prompt("phần tử thứ "+i);
+            array[i]=num;
+        }
+        check=false;
+        let text=prompt("nhập giá trị: ");
+        for(let i=0;i<array.length;i++){
+            if(array[i]==text){
+                document.write(text+" is in the array: "+" "+array+"<br>");
+                array.splice(i,1);
+                document.write("delete"+" "+ text+" "+ "in the array: "+array);
+                check=true;
+                break;
+            }
+
+        }
+        if(!check){
+            document.write(text+" is not in the array ")
+        }
+    </script>
+</body>
+</html>

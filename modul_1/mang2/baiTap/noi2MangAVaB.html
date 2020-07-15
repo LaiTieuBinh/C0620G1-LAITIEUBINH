@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let lengthA=prompt("nhập chiều dài mảng A");
+        let arrayA=new Array(lengthA);
+        for(let i=0;i<lengthA;i++){
+            let num1=prompt("phần tử thứ "+i);
+            arrayA[i]=num1;
+        }
+        document.write("dãy số A: "+arrayA+"<br>");
+        let lengthB=prompt("nhập chiều dài mảng B");
+        let arrayB=new Array(lengthB);
+        for(let j=0;j<lengthB;j++){
+            let num2=prompt("phần tử thứ "+j);
+            arrayB[j]=num2;
+        }
+        document.write("Dãy số B"+arrayB+"<br>");
+        let arrayC=arrayA.concat(arrayB);
+        document.write("Dãy số C"+arrayC);
+    </script>
+</body>
+</html>

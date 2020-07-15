@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let lengthMang=parseInt(prompt("nhập chiều dài của mảng "));
+        let mang=new Array(lengthMang);
+        for(let j=0;j<mang.length;j++){
+            let num=parseInt(prompt("phần tử thứ "+j));
+            mang[j]=num;
+        }
+        let max=0;
+        let index=0;
+        for(let i=0;i<mang.length;i++){
+            if(mang[i]>max){
+                max=mang[i];
+                index=i;
+            }
+        }
+        document.write("Gtln là: "+max+" "+ "Vị trí thứ: "+index);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let i,j;
+        let a ="<table border='1' width='300' cellspacing='0px' cellpadding='3px'>";
+        for(i=1;i<10;i++){
+            a += "<tr>";
+            for(j=1;j<10;j++){
+                a = a + "<td>" + i*j + "</td>";
+            }
+            a += "</tr>";
+        }
+        document.write(a);
+    </script>
+</body>
+</html>

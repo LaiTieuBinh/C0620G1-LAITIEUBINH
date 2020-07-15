@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <script>-->
+<!--        let i,j;-->
+<!--        let a = "<table border='1' width='30' cellpadding='3' cellspacing='0'>";-->
+<!--        for(i=1;i<10;i++){-->
+<!--            a += "<tr>";-->
+<!--            for(j=2;j<10;j++){-->
+<!--                a = a + "<td>" + j + "x" + i + "=" + i*j + "</td>";-->
+<!--            }-->
+<!--            a += "</tr>";-->
+<!--        }-->
+<!--        a += "<table>";-->
+<!--        document.write(a);-->
+
+<!--    </script>-->
+
+    <script>
+        let i=1,j=2;
+        let a = "<table border='1' width='30' cellspacing='0' cellpadding='3' '>";
+        while(i<10){
+            a+= "<tr>";
+            while(j<10){
+                a = a + "<td>" + j + "x" + i + "=" + i*j + "</td>";
+                j++;
+            }
+            a+= "</tr>";
+            j=2;
+            i++;
+        }
+        a += "</table>";
+        document.write(a);
+    </script>
+</body>
+</html>

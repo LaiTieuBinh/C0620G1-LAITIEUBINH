@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length1 = parseInt(prompt("nhập chiều dài mảng i: "));
+    let array = new Array(length1);
+    for (let i = 0; i < length1; i++) {
+        let length2 = parseInt(prompt("nhập chiều dài mảng j: "));
+        array[i] = new Array(length2);
+        for (let j = 0; j < length2; j++) {
+            let num = parseInt(prompt("phần tử thứ " + j));
+            array[i][j] = num;
+        }
+    }
+    for (let k = 0; k < array.length; k++) {
+        document.write("<br>"+"row " + k+":");
+        for (let m = 0; m < array[k].length; m++) {
+            document.write(array[k][m] +" ");
+        }
+    }
+
+</script>
+</body>
+</html>

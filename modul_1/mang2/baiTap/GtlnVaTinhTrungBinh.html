@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let lengthMang =parseInt(prompt("nhập chiều dài mảng: "));
+        let mang=new Array(lengthMang);
+        for(let i=0;i<mang.length;i++){
+            let num=parseInt(prompt("phần tử thứ "+i));
+            mang[i]=num;
+        }
+        let max=0;
+        let sum=0;
+        let avanger=0;
+        for(let i=0;i<mang.length;i++){
+            sum+=mang[i];
+            if(mang[i]>max){
+                max=mang[i];
+            }
+        }
+        avanger=sum/mang.length;
+        document.write("giá trị trung bình "+avanger+"<br>");
+        document.write("Gtln "+max);
+
+    </script>
+</body>
+</html>

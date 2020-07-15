@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let length=parseInt(prompt("nhập chiều dài của mảng "));
+        let array=new Array(length);
+        for(let i=0;i<array.length;i++){
+            let num=prompt("phần tử thứ "+i);
+            array[i]=num;
+        }
+        document.write(array);
+        let text=prompt("nhập kí tự:");
+        let check = false;
+        for(let i=0;i<array.length;i++) {
+            if (array[i] === text) {
+                alert(text+" is in the array");
+                check=true;
+                break;
+            }
+        }
+            if(!check){
+                alert(text+" is not in the array");
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        let length=parseInt(prompt("nhập chiều dài mảng: "));
+        let array=new Array(length);
+        for(let i=0;i<array.length;i++){
+            let num=prompt("nhập ký tự: ");
+            array[i]=num;
+        }
+        let count=0;
+        for(let j=0;j<array.length;j++){
+            if(!isNaN(array[j])){
+                count++;
+
+            }
+        }
+        document.write(array+"<br>");
+        document.write("count: "+count);
+    </script>
+</body>
+</html>

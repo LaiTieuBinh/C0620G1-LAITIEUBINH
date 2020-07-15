@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let doDaiMang = parseInt(prompt("Nhập độ dài của mảng "));
+        let daySoNguyen= new Array(doDaiMang);
+        for(let i=0;i<doDaiMang;i++){
+            let soNguyen=parseInt(prompt("nhập vào phần tử thứ i "+i));
+            daySoNguyen[i]=soNguyen;
+        }
+        let count=0;
+        let sum=0;
+        for(let j=0;j<daySoNguyen.length;j++){
+            if(daySoNguyen[j]>=10){
+                document.write(daySoNguyen[j]+" ");
+                sum+=daySoNguyen[j];
+                count++;
+            }
+
+        }
+            document.write("<br>"+"tổng là:  " +sum+"<br>");
+            document.write(count);
+
+    </script>
+</body>
+
+</html>

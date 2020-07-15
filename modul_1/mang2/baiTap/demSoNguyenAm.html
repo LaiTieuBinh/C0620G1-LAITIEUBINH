@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let length=parseInt(prompt("nhập chiều dài mảng "));
+        let array=new Array(length);
+        for(let i=0; i<array.length;i++){
+            let num=parseInt(prompt("phần tử thứ "+i));
+            array[i]=num;
+        }
+        let count=0;
+        for(let i=0;i<array.length;i++){
+            if(array[i]<0){
+                document.write(array[i]+" ");
+                count++;
+            }
+        }
+        document.write("<br>"+"số lượng số âm là: "+count);
+    </script>
+</body>
+</html>

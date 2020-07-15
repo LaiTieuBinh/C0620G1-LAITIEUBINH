@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let length=parseInt(prompt("nhập chiều dài mảng: "));
+        let array=new Array(length);
+        for(let i=0;i<array.length;i++){
+            let num=parseInt(prompt("phần tử thứ "+i));
+            array[i]=num;
+        }
+        document.write("dãy số:"+array+"<br>");
+        array.sort(function (a,b) {
+            return b-a;
+        }
+        );
+        document.write("dãy số xắp sếp: "+array.join());
+    </script>
+</body>
+</html>

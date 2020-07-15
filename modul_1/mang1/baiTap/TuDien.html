@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<script>
+    let str = prompt("nhập từ ");
+    let english=["dog","cat","mouse","pink","red","monday"];
+    let vietnamese=["chó","mèo","chuột","màu hồng","đỏ","thứ hai"];
+    // if(str===english[0]){
+    //     alert(vietnamese[0]);
+    // } else if (str===english[1]){
+    //     alert(vietnamese[1]);
+    // }else if (str===english[2]){
+    //     alert(vietnamese[2]);
+    // }else if (str===english[3]){
+    //     alert(vietnamese[3]);
+    // }else if (str===english[4]){
+    //     alert(vietnamese[4]);
+    // } else alert("không thấy ");
+    let check=false;
+    for(i=0;i<english.length;i++){
+        if(str===english[i]){
+            alert(vietnamese[i]);
+            check=true;
+            break;
+        }
+    }
+    if(!check){
+        alert("không thấy");
+    }
+
+</script>
+
+</body>
+</html>

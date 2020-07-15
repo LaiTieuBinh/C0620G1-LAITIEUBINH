@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let doc = parseInt(prompt("nhập chiều dọc "));
+        let ngang = parseInt(prompt("nhập chiều ngang "));
+        let i,j;
+        for(i=1;i<=doc;i++) {
+            for (j = 1; j <= ngang; j++) {
+                if (i == 1 || j == 1 || i == doc || j == ngang) {
+                    document.write("*");
+                } else document.write("&nbsp;"+"&nbsp;");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>
