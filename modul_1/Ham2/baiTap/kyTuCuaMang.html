@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let length=parseInt(prompt("nhập chiều dài mảng: "));
+        let array=new Array(length);
+        for(let i=0;i<array.length;i++){
+            array[i]=prompt("phần tử thứ: "+i);
+        }
+        let text=prompt("nhập ký tự bất kì: ");
+        function kiemTra(a) {
+            count=0;
+            check=false;
+            for(i=0;i<a.length;i++){
+                if(text==a[i]){
+                    count++;
+                    alert("ký tự nằm trong mảng"+"số lần: "+count);
+                    check=true;
+                }
+            }
+            if(!check){
+                alert(-1);
+            }
+        }
+        kiemTra(array);
+    </script>
+</body>
+</html>

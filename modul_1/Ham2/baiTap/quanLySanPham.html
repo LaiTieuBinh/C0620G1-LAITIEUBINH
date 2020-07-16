@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Add New Product</h2>
+    <form>
+        <input id="a1" type="text" name="input" value="">
+        <input id="a2" type="button" value="Add" onclick="addProduct()">
+        <br>
+        <div id="sum"></div>
+        <div id="display"></div>
+
+    </form>
+<script>
+    let array=["Sony Xperia","Samsung Galaxy","Nokia 6","Xiaomi Redmi Not4","Apple Iphone 6s",
+    "Xiaomi Mi 5S Plus","Apple Iphone 8s","Fujitsu F-04E","Oppo A71"];
+    // document.write(array);
+    hienThiName();
+    function hienThiName(){
+        let tableString="<table border='1'>";
+        tableString+="<tr>";
+        tableString+="<td>"+"Số thứ tự"+"</td>";
+        tableString+="<td>"+"Tên sản phẩm"+"</td>";
+        tableString+="<td>"+"Sửa"+"</td>";
+        tableString+="<td>"+"Xóa"+"</td>";
+        tableString+="</tr>";
+        for(let i=0;i<array.length;i++){
+           tableString+="<tr>";
+           tableString+="<td>"+(i+1)+"</td>";
+           tableString+="<td>"+array[i]+"</td>";
+           tableString+="<td>"+"<input type='button' value='Edit' onclick='sua("+i+")'>"+"</td>";
+           tableString+="<td>"+"<input type='button' value='Delete' onclick='xoa("+i+")'>"+"</td>";
+           tableString+="</tr>";
+        }
+        tableString+="</table>";
+        document.getElementById("display").innerHTML=tableString;
+        document.getElementById("sum").innerHTML="Tổng số product là: "+array.length;
+    }
+
+    function addProduct() {
+        let add=document.getElementById("a1").value;
+        if(add==null){
+            alert("nhập tên sản phẩm vào: ");
+        }else if(add=="") {
+            alert("nhập tên sản phẩm vào: ");
+        }else{
+            array.push(add);
+            document.getElementById("a1").value="";
+        }
+        hienThiName();
+    }
+
+    function xoa(i){
+        // alert(i);
+        let kiemTraXoa=confirm("bạn có muốn xóa"+" "+array[i]+i);
+        if(kiemTraXoa){
+            array.splice(i,1);
+        } else alert("bạn không xóa sản phẩm này");
+
+        hienThiName();
+    }
+    function sua(i) {
+        let tenChinhSua=prompt("nhập tên chỉnh sửa: ");
+        if(tenChinhSua==null){
+            alert("bạn không muốn sửa");
+            tenChinhSua=array[i];
+        }
+        while(tenChinhSua=="") {
+            alert("bạn chưa sửa");
+            tenChinhSua = prompt("hãy nhập lại:");
+            }
+        array[i]=tenChinhSua;
+        // if(tenChinhSua==""){
+        //     alert("hãy nhập tên chỉnh sửa: ");
+        // } else {
+        //     array[i] = tenChinhSua;
+        // }
+        hienThiName();
+    }
+</script>
+</body>
+</html>

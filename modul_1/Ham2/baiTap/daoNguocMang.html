@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let length=parseInt(prompt("nhập độ dài mảng: "));
+        let arr=new Array(length);
+        for(let i=0;i<arr.length;i++){
+            arr[i]=parseInt(prompt("phần tử thứ "+i));
+        }
+        function daoNguoc(arr) {
+            let first=0;
+            let last=arr.length-1;
+            while(first<last) {
+                b = arr[first];
+                arr[first] = arr[last];
+                arr[last] = b;
+                first++;
+                last--;
+            }
+            return arr;
+        }
+        alert("đảo ngược: "+daoNguoc(arr));
+    </script>
+</body>
+</html>
